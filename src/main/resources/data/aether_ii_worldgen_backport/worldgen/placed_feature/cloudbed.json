@@ -1,0 +1,8 @@
+{
+  "feature": "aether_ii_worldgen_backport:cloudbed",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
