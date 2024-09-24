@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "juni.aether_ii_worldgen_backport.mixin.mixins",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "aether_ii_worldgen_backport.refmap.json",
+  "mixins": [
+    "common.accessor.PerlinNoiseAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

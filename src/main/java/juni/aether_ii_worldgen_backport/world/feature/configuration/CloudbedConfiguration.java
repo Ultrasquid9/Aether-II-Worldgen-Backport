@@ -1,19 +1,20 @@
 package juni.aether_ii_worldgen_backport.world.feature.configuration;
 
-
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.world.level.levelgen.DensityFunction;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
-public record CloudbedConfiguration(BlockStateProvider block, int baseHeight, double scaleXZ, long noiseXZ, long noiseY, float thicknessUp, float thicknessDown) implements FeatureConfiguration {
+public record CloudbedConfiguration(BlockStateProvider block, BlockPredicate predicate, int yLevel, DensityFunction cloudNoise, double cloudRadius, DensityFunction yOffset, double maxYOffset) implements FeatureConfiguration {
     public static final Codec<CloudbedConfiguration> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
             BlockStateProvider.CODEC.fieldOf("block").forGetter(CloudbedConfiguration::block),
-            Codec.INT.fieldOf("base_height").forGetter(CloudbedConfiguration::baseHeight),
-            Codec.DOUBLE.fieldOf("scale_xz").forGetter(CloudbedConfiguration::scaleXZ),
-            Codec.LONG.fieldOf("noise_factor_xz").forGetter(CloudbedConfiguration::noiseXZ),
-            Codec.LONG.fieldOf("noise_factor_y").forGetter(CloudbedConfiguration::noiseY),
-            Codec.FLOAT.fieldOf("thickness_up").forGetter(CloudbedConfiguration::thicknessUp),
-            Codec.FLOAT.fieldOf("thickness_down").forGetter(CloudbedConfiguration::thicknessDown)
+            BlockPredicate.CODEC.fieldOf("predicate").forGetter(CloudbedConfiguration::predicate),
+            Codec.INT.fieldOf("y_level").forGetter(CloudbedConfiguration::yLevel),
+            DensityFunction.HOLDER_HELPER_CODEC.fieldOf("cloud_noise").forGetter(CloudbedConfiguration::cloudNoise),
+            Codec.DOUBLE.fieldOf("cloud_radius").forGetter(CloudbedConfiguration::cloudRadius),
+            DensityFunction.HOLDER_HELPER_CODEC.fieldOf("offset_noise").forGetter(CloudbedConfiguration::yOffset),
+            Codec.DOUBLE.fieldOf("offset_max").forGetter(CloudbedConfiguration::maxYOffset)
     ).apply(instance, CloudbedConfiguration::new));
 }

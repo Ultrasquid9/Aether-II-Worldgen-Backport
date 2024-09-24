@@ -218,3 +218,12 @@ publishing {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
+
+tasks.named(sourceSets.main.compileJavaTaskName) {
+    outputs.file("${it.temporaryDir}/${it.name}-refmap.json").withPropertyName("mixin refmap")
+}
+
+mixin {
+    config "aether_ii_worldgen_backport.mixins.json"
+    add sourceSets.main, "aether_ii_worldgen_backport.refmap.json"
+}

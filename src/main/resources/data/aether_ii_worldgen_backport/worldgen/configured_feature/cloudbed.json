@@ -1,20 +1,79 @@
 {
   "type": "aether_ii_worldgen_backport:cloudbed",
   "config": {
-    "base_height": 96,
     "block": {
-      "type": "minecraft:simple_state_provider",
-      "state": {
-        "Name": "aether:cold_aercloud",
-        "Properties": {
-          "double_drops": "true"
+      "type": "minecraft:noise_provider",
+      "noise": {
+        "amplitudes": [
+          1.25,
+          -0.25,
+          1.0,
+          0.5,
+          1.25
+        ],
+        "firstOctave": -7
+      },
+      "scale": 1.0,
+      "seed": 2345,
+      "states": [
+        {
+          "Name": "aether:golden_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:cold_aercloud"
+        },
+        {
+          "Name": "aether:blue_aercloud"
         }
-      }
+      ]
     },
-    "noise_factor_xz": 64,
-    "noise_factor_y": 96,
-    "scale_xz": 1.0,
-    "thickness_down": 6.0,
-    "thickness_up": 6.0
+    "cloud_noise": "aether_ii_worldgen_backport:highlands/cloudbed/noise",
+    "cloud_radius": 10.0,
+    "offset_max": 15.0,
+    "offset_noise": "aether_ii_worldgen_backport:highlands/cloudbed/y_offset",
+    "predicate": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "minecraft:air"
+    },
+    "y_level": 96
   }
 }
