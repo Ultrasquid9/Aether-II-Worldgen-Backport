@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": 9.0,
+  "argument2": "aether_ii_worldgen_backport:highlands/coasts/base_noise"
+}
