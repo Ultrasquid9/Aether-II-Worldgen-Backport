@@ -2,6 +2,7 @@ package juni.aether_ii_worldgen_backport;
 
 import juni.aether_ii_worldgen_backport.world.density.AetherIIWorldgenBackportDensityFunctionTypes;
 import juni.aether_ii_worldgen_backport.world.feature.AetherIIWorldgenBackportFeatures;
+import juni.aether_ii_worldgen_backport.world.tree.foliage.AetherIIWorldgenBackportFoliagePlacerTypes;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -21,6 +22,7 @@ public class AetherIIWorldgenBackport
 		// Registerring
 		AetherIIWorldgenBackportFeatures.FEATURES.register(modEventBus);
 		AetherIIWorldgenBackportDensityFunctionTypes.DENSITY_FUNCTIONS.register(modEventBus);
+		AetherIIWorldgenBackportFoliagePlacerTypes.FOLIAGE_PLACERS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
