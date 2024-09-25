@@ -1,6 +1,6 @@
 {
   "carvers": {},
-  "downfall": 0.8,
+  "downfall": 0.4,
   "effects": {
     "fog_color": 15526908,
     "foliage_color": 11665355,
@@ -17,34 +17,34 @@
   },
   "features": [
     [
-      "aether:quicksoil_shelf"
+		"aether:quicksoil_shelf"
     ],
     [
-      "aether:water_lake"
+		"aether:water_lake"
     ],
     [],
     [],
     [],
     [],
     [
-	  "aether:aether_dirt_ore",
-	  "aether:icestone_ore",
-	  "aether:ambrosium_ore",
-	  "aether:zanite_ore",
-	  "aether:gravitite_ore_buried",
-	  "aether:gravitite_ore"
+		"aether:aether_dirt_ore",
+		"aether:icestone_ore",
+		"aether:ambrosium_ore",
+		"aether:zanite_ore",
+		"aether:gravitite_ore_buried",
+		"aether:gravitite_ore"
     ],
     [],
     [
       "aether:water_spring"
     ],
     [
-      	"aether_ii_worldgen_backport:verdant_woods_trees",
-		"aether:grass_patch",
-		"aether:tall_grass_patch",
-		"aether:white_flower_patch",
-		"aether:purple_flower_patch",
-		"aether:berry_bush_patch"
+      "aether_ii_worldgen_backport:flourishing_field_trees",
+	  "aether:grass_patch",
+	  "aether:tall_grass_patch",
+	  "aether:white_flower_patch",
+	  "aether:purple_flower_patch",
+	  "aether:berry_bush_patch"
     ],
     [
 		"aether:crystal_island",
