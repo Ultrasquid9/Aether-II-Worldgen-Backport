@@ -23,7 +23,7 @@
 	"noise_router": {
 	  "barrier": 0.0,
 	  "continents": 0.0,
-	  "depth": 0.0,
+	  "depth": "aether_ii_worldgen_backport:highlands/depth",
 	  "erosion": 0.0,
 	  "final_density": "aether_ii_worldgen_backport:highlands/terrain/final_islands",
 	  "fluid_level_floodedness": 0.0,
